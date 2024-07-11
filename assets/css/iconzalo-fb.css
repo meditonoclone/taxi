@@ -1,0 +1,33 @@
+.floating-icons {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+  }
+  
+  @keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+  }
+  
+  #phone-icon { background-color: #25D366; }
+  #fb-icon { background-color: #1877F2; }
+  #messenger-icon { background-color: #0084FF; }

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Biên Hòa</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/tintuchome.css">
+    <link rel="stylesheet" href="./assets/css/iconzalo-fb.css">
+    <link rel="stylesheet" href="./assets/css/ketnoi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+
+
+</head>
+
+<body>
+    <div class="app">
+
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./assets/images/logotaxi.png" alt="Taxi Logo" width="100" height="50">
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="dich-vu.html">Dịch Vụ</a></li>
+                        <li><a href="TrangTinTuc.html">Tin tức</a></li>
+                        <li><a href="contact-us.html">Liên Hệ</a></li>
+                        <li><a href="about-us.html">Về Chúng Tôi</a></li>
+                    </ul>
+                </nav>
+                <div class="action-buttons">
+                    <a href="tel:0838229966" class="btn-53">
+                        <div class="original">Call Taxi Now</div>
+                        <div class="letters">
+                            <span>0</span><span>8</span><span>3</span><span>8</span><span>2</span><span>2</span><span>9</span><span>9</span><span>6</span><span>6</span>
+                        </div>
+                    </a>
+                    <div class="user-account">
+                        <button class="account-btn">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <div class="account-dropdown">
+                            <a href="#" id="login-link">Đăng nhập</a>
+                            <a href="#" id="register-link">Đăng ký</a>
+                            <a href="#" id="forgot-password-link">Quên mật khẩu</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navbar-mobile-container">
+                    <input type="checkbox" id="nav-mobile-icon">
+                    <label for="nav-mobile-icon" class="nav-mobile-icon">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <label for="nav-mobile-icon" class="nav-mb-overlay"></label>
+                    <div class="navbar-mobile">
+                        <ul>
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="dich-vu.html">Dịch Vụ</a></li>
+                            <li><a href="TrangTinTuc.html">Tin tức</a></li>
+                            <li><a href="contact-us.html">Liên Hệ</a></li>
+                            <li><a href="about-us.html">Về Chúng Tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main style="padding-top: 0">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="./assets/images/slider1.png" alt="Taxi service">
+                        <div class="slide-content">
+                            <!-- Nội dung slide nếu cần -->
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/images/slider2.png" alt="Taxi fleet">
+                        <div class="slide-content">
+                            <!-- Nội dung slide nếu cần -->
+                        </div>
+                    </div>
+                    <!-- Thêm các slide khác nếu cần -->
+                    <div class="slide">
+                        <img src="./assets/images/slider3.png" alt="Taxi fleet">
+                        <div class="slide-content">
+                            <!-- Nội dung slide nếu cần -->
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-arrow prev">&lt;</button>
+                <button class="slider-arrow next">&gt;</button>
+            </div>
+        </main>
+
+
+
+        <!-- Login Modal -->
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Đăng nhập</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Tài khoản:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mật khẩu:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div id="register-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Đăng ký</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="reg-username">Tên đăng nhập:</label>
+                        <input type="text" id="reg-username" name="reg-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email:</label>
+                        <input type="email" id="reg-email" name="reg-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Mật khẩu:</label>
+                        <input type="password" id="reg-password" name="reg-password" required
+                            pattern="(?=.*[A-Z]).{8,}">
+                        <small>Mật khẩu phải có ít nhất 8 ký tự và chứa ít nhất một chữ in hoa</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Xác nhận mật khẩu:</label>
+                        <input type="password" id="reg-confirm-password" name="reg-confirm-password" required>
+                    </div>
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal -->
+        <div id="forgot-password-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Quên mật khẩu</h2>
+                <form id="forgot-password-form">
+                    <div class="form-group">
+                        <label for="forgot-email">Email:</label>
+                        <input type="email" id="forgot-email" name="forgot-email" required>
+                    </div>
+                    <button type="submit">Gửi yêu cầu đặt lại mật khẩu</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="success-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="success-title"></h2>
+                <p id="success-message"></p>
+                <button id="close-success">Đóng</button>
+            </div>
+        </div>
+
+        <div class="account-dropdown">
+            <a href="#" data-action="login">Đăng nhập</a>
+            <a href="#" data-action="register">Đăng ký</a>
+            <a href="#" data-action="forgot-password">Quên mật khẩu</a>
+        </div>
+
+
+        <main>
+            <main>
+                <div class="container">
+                    <div class="content-wrapper">
+                        <!-- Phần nội dung khác giữ nguyên -->
+                        <div class="booking-section">
+                            <h2>ĐẶT XE NHANH</h2>
+                            <form id="booking-form" class="booking-form">
+                                <input type="text" placeholder="Điểm đi" required>
+                                <input type="text" placeholder="Điểm đến" required>
+                                <input type="number" placeholder="Số hành khách" required>
+                                <select required>
+                                    <option value="">Chọn loại xe</option>
+                                    <option>Xe 4 chỗ</option>
+                                    <option>Xe 7 chỗ</option>
+                                </select>
+                                <input type="tel" id="phone" placeholder="Số điện thoại" pattern="[0-9]*" required>
+                                <input type="text" id="name" placeholder="Họ và tên" pattern="[A-Za-zÀ-ỹ\s]+" required>
+                                <button type="submit" class="btn btn-orange">ĐẶT XE</button>
+                            </form>
+                            <div id="booking-success" style="display: none; color: green; margin-top: 10px;">
+                                Đặt xe thành công! Chúng tôi sẽ liên hệ với bạn sớm.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.getElementById('booking-form').addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        var phone = document.getElementById('phone');
+                        var name = document.getElementById('name');
+
+                        // Kiểm tra số điện thoại
+                        if (!/^[0-9]+$/.test(phone.value)) {
+                            alert('Số điện thoại chỉ được chứa số.');
+                            return;
+                        }
+
+                        // Kiểm tra tên
+                        if (!/^[A-Za-zÀ-ỹ\s]+$/.test(name.value)) {
+                            alert('Họ và tên chỉ được chứa chữ cái và khoảng trắng.');
+                            return;
+                        }
+
+                        // Nếu mọi thứ hợp lệ, hiển thị thông báo thành công
+                        document.getElementById('booking-success').style.display = 'block';
+
+                        // Reset form
+                        this.reset();
+                    });
+                </script>
+
+                <script>
+                    document.getElementById('booking-form').addEventListener('submit', function (e) {
+                        e.preventDefault(); // Ngăn chặn form gửi đi theo cách thông thường
+
+                        // Ở đây bạn có thể thêm code để gửi dữ liệu form đến server
+                        // Ví dụ: sử dụng fetch() để gửi request AJAX
+
+                        // Hiển thị thông báo thành công
+                        document.getElementById('booking-success').style.display = 'block';
+
+                        // Reset form
+                        this.reset();
+                    });
+                </script>
+                <main>
+                    <div class="container">
+                        <div class="header-section">
+                            <div class="header-text">
+                                <h1>TỔNG ĐÀI DỊCH VỤ TAXI BIÊN HÒA</h1>
+                                <h2>HỖ TRỢ GỌI TAXI - ĐẶT TAXI ONLINE</h2>
+                                <a href="tel:0869754702" class="btn btn-red">📞 0869754702</a>
+                            </div>
+                            <div class="header-image">
+                                <img src="./assets/images/taxi-illustration.png" alt="Taxi Illustration">
+                            </div>
+                        </div>
+
+                        <section class="services">
+
+                            <div class="service-grid">
+                                <div class="service-item">
+
+                                    <h3>PHỤC VỤ 24/24</h3>
+                                    <p>Đội Ngũ Lái Xe Được Đào Tạo Chuyên Nghiệp.Dịch Vụ Taxi Công Nghệ</p>
+                                </div>
+                                <div class="service-item">
+                                    <h3>GIÁ RẺ NHẤT</h3>
+                                    <p>Cam kết chi phí của khách hàng khi sử dụng dịch vụ luôn luôn rẻ nhất khu vực</p>
+                                </div>
+                                <div class="service-item">
+                                    <h3>CHUYÊN NGHIỆP</h3>
+                                    <p>Tác phong phục vụ chuyên nghiệp – nhã nhặn. Đúng thời gian đặt lịch</p>
+                                </div>
+                                <div class="service-item">
+                                    <h3>AN TOÀN</h3>
+                                    <p>Tiêu chí tính mạng con người là quan trọng nhất chúng tôi luôn giữ an toàn tốt
+                                        nhất.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="price-table">
+                            <h2 style="text-align: center; color: #161a18; margin-bottom: 10px;">BẢNG BÁO GIÁ TAXI KHU
+                                VỰC
+                                BIÊN HÒA - ĐỒNG NAI - GIÁ CHỈ TỪ 10.000/KM</h2>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Các loại xe</th>
+                                        <th>Giá mở cửa</th>
+                                        <th>Giá cước các Km tiếp theo</th>
+                                        <th>Giá cước từ Km thứ 31</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Xe 4 chỗ nhỏ</td>
+                                        <td>10.000đ</td>
+                                        <td>12.500đ</td>
+                                        <td>10.500đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Xe 4 chỗ lớn</td>
+                                        <td>11.000đ</td>
+                                        <td>14.000đ</td>
+                                        <td>11.600đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Xe 7 chỗ</td>
+                                        <td>11.000đ</td>
+                                        <td>17.000đ</td>
+                                        <td>13.600đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thời gian chờ</td>
+                                        <td colspan="3">45.000đ/h</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="service">
+                            <div class="container">
+                                <div class="section-title">
+                                    <h2 style="text-align: center; color: #171918; margin-bottom: 10px;">DỊCH VỤ CỦA
+                                        CHÚNG
+                                        TÔI</h2>
+
+                                </div>
+                                <div class="service-grid">
+                                    <div class="service-item">
+                                        <img src="./assets/images/xevios.png" alt="Xe 5 chỗ">
+                                        <h3>XE 5 CHỖ</h3>
+                                        <p>Xe 5 chỗ đời mới cao cấp (Vios, Inova)</p>
+                                        <a href="tel:+84901234567" class="btn">GỌI NGAY</a>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="./assets/images/xeinova.png" alt="Xe 8 chỗ">
+                                        <h3>XE 8 CHỖ</h3>
+                                        <p>Xe Innova đời mới cao cấp</p>
+                                        <a href="tel:+84901234567" class="btn">GỌI NGAY</a>
+                                    </div>
+                                    <div class="service-item">
+                                        <img src="./assets/images/xeford.png" alt="Xe 16 chỗ">
+                                        <h3>XE 16 CHỖ</h3>
+                                        <p>Xe Ford Transit cao cấp</p>
+                                        <a href="tel:+84901234567" class="btn">GỌI NGAY</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="futa-bus-lines" style="max-width: 1200px; margin: 40px auto; padding: 20px;">
+                            <h2 style="text-align: center; color: #1b1d1c; margin-bottom: 10px;">BIEN HOA TAXI LINES -
+                                CHẤT
+                                LƯỢNG LÀ DANH DỰ</h2>
+                            <p style="text-align: center; margin-bottom: 30px;">Được khách hàng tin tưởng và lựa chọn
+                            </p>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="width: 60%;">
+                                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                                        <img src="./assets/images/icon1.png" alt="Lượt khách"
+                                            style="width: 50px; height: 50px; margin-right: 20px;">
+                                        <div>
+                                            <h3 style="margin: 0;">Hơn 20 Triệu Lượt khách</h3>
+                                            <p style="margin: 5px 0 0;"> Biên hòa taxi phục vụ hơn 20 triệu lượt khách
+                                                bình
+                                                quân 1 năm trên toàn quốc</p>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                                        <img src="./assets/images/icon2.png" alt="Phòng vé"
+                                            style="width: 50px; height: 50px; margin-right: 20px;">
+                                        <div>
+                                            <h3 style="margin: 0;">Hơn 350 Phòng vé - Bưu cục</h3>
+                                            <p style="margin: 5px 0 0;" Biên hòa taxi có hơn 350 phòng vé, trạm trung
+                                                chuyển, bến xe,... trên toàn hệ thống</p>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="./assets/images/icon2.png" alt="Chuyến xe"
+                                            style="width: 50px; height: 50px; margin-right: 20px;">
+                                        <div>
+                                            <h3 style="margin: 0;">Hơn 1,000 Chuyến xe</h3>
+                                            <p style="margin: 5px 0 0;">Biên hòa taxi phục vụ hơn 1,000 chuyến xe đường
+                                                dài
+                                                và liên tỉnh mỗi ngày</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="width: 35%;">
+                                    <img src="./assets/images/anhicon.png" alt="Minh họa"
+                                        style="width: 100%; height: auto;">
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="content-wrapper">
+                            <div class="content">
+                                <h2 style="text-align: center; color: #0f1010; margin-bottom: 10px;">Lợi ích khi chọn
+                                    Tổng
+                                    đài Taxi Biên Hòa – Taxi Đồng Nai</h2>
+
+                                <ul class="benefits-list">
+                                    <li>✔ Đán xe đời mới, sang trọng, chất lượng cao</li>
+                                    <li>✔ Giá cước rẻ, niêm yết trọn gói, có VAT</li>
+                                    <li>✔ Dich vụ đưa đón đúng giờ, đúng tuyến</li>
+                                    <li>✔ Miễn thời gian chờ 60 phút</li>
+                                    <li>✔ Tổng đài chăm sóc khách hàng 24/7</li>
+                                    <li>✔ Hệ thống quản lý đặt xe chuyên nghiệp</li>
+                                    <li>✔ Nhiều ưu đãi đối với khách hàng tổ chức</li>
+                                </ul>
+                                <button class="book-button">ĐẶT XE NGAY</button>
+                                <button class="book-button">LIÊN HỆ NGAY</button>
+                                <button class="book-button">TƯ VẤN NGAY</button>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="./assets/images/anhloiich.png" alt="Image Description">
+                            </div>
+                        </div>
+
+                        <section class="news-section">
+                            <h2 style="text-align: center; color: #151515; margin-bottom: 10px;">TIN TỨC MỚI</h2>
+
+                            <div class="news-slider">
+                                <div class="news-container">
+                                    <div class="news-item">
+                                        <img src="./assets/images/imagetintuc1.png" alt="Tin tức 1">
+                                        <h3>CÔNG TY PHƯƠNG TRANG NÂNG CẤP ĐỒNG XE TUYẾN BẾN XE MIỀN TÂY ↔ BẾN XE TRÀ
+                                            VINH
+                                        </h3>
+                                        <p>19/06/2024</p>
+                                        <a href="TrangTinTuc.html" class="read-more">Chi tiết</a>
+                                    </div>
+                                    <div class="news-item">
+                                        <img src="./assets/images/imagetintuc1.png" alt="Tin tức 2">
+                                        <h3>PHƯƠNG TRANG – FUTA BUS LINES THÔNG BÁO MỞ VĂN PHÒNG PHÚ LỘC – CHI NHÁNH HUẾ
+                                        </h3>
+                                        <p>19/06/2024</p>
+                                        <a href="TrangTinTuc.html" class="read-more">Chi tiết</a>
+                                    </div>
+                                    <div class="news-item">
+                                        <img src="./assets/images/imagetintuc1.png" alt="Tin tức 3">
+                                        <h3>TƯNG BỪNG KHAI TRƯƠNG TUYẾN BẾN XE ĐỨC LONG (BẢO LỘC) - BẾN XE BÌNH SƠN
+                                            (QUẢNG
+                                            NGÃI)</h3>
+                                        <p>20/06/2024</p>
+                                        <a href="TrangTinTuc.html" class="read-more">Chi tiết</a>
+                                    </div>
+                                    <div class="news-item">
+                                        <img src="./assets/images/imagetintuc1.png" alt="Tin tức 4">
+                                        <h3>PHƯƠNG TRANG – FUTA BUS LINES THÔNG BÁO MỞ VĂN PHÒNG PHÚ LỘC – CHI NHÁNH HUẾ
+                                        </h3>
+                                        <p>21/06/2024</p>
+                                        <a href="TrangTinTuc.html" class="read-more">Chi tiết</a>
+                                    </div>
+                                    <div class="news-item">
+                                        <img src="./assets/images/imagetintuc1.png" alt="Tin tức 5">
+                                        <h3>PHƯƠNG TRANG – FUTA BUS LINES THÔNG BÁO MỞ VĂN PHÒNG PHÚ LỘC – CHI NHÁNH HUẾ
+                                        </h3>
+                                        <p>22/06/2024</p>
+                                        <a href="TrangTinTuc.html" class="read-more">Chi tiết</a>
+                                    </div>
+                                    <div class="news-item">
+                                        <img src="./assets/images/imagetintuc1.png" alt="Tin tức 6">
+                                        <h3>PHƯƠNG TRANG – FUTA BUS LINES THÔNG BÁO MỞ VĂN PHÒNG PHÚ LỘC – CHI NHÁNH HUẾ
+                                        </h3>
+                                        <p>23/06/2024</p>
+                                        <a href="TrangTinTuc.html" class="read-more">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+
+                        </section>
+
+                        <section class="futa-group-connections">
+                            <h2>KẾT NỐI BIEN HOA GROUP</h2>
+                            <p>Kết nối đa dạng hệ sinh thái BIEN HOA Group qua App BIEN HOA: mua vé Xe Bien Hòa, Xe
+                                Buýt, Xe
+                                Hợp Đồng, Giao Hàng,...</p>
+
+                            <div class="connection-options">
+                                <div class="option">
+                                    <div class="icon-circle">
+                                        <img src="./assets/images/iconketnoi1.png" alt="Xe Hợp Đồng">
+                                    </div>
+                                    <p>Xe Hợp Đồng</p>
+                                </div>
+                                <div class="option">
+                                    <div class="icon-circle">
+                                        <img src="./assets/images/iconketnoi2.png" alt="Mua vé Phương Trang">
+                                    </div>
+                                    <p>Mua vé Biên Hòa</p>
+                                </div>
+                                <div class="option">
+                                    <div class="icon-circle">
+                                        <img src="./assets/images/iconketnoi3.png" alt="Giao Hàng">
+                                    </div>
+                                    <p>Giao Hàng</p>
+                                </div>
+                                <div class="option">
+                                    <div class="icon-circle">
+                                        <img src="./assets/images/iconketnoi4.png" alt="Xe Buýt">
+                                    </div>
+                                    <p>Xe Buýt</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <h2 style="text-align: center; color: #1d1e1d; margin-bottom: 10px;">DỊCH VỤ TAXI</h2>
+
+                        <div
+                            style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto;">
+                            <div style="text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                                <img src="./assets/images/thue-xe-ve-que.png" alt="Thuê xe về quê"
+                                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <p style="margin-top: 10px; font-weight: bold;">THUÊ XE VỀ QUÊ</p>
+                            </div>
+                            <div style="text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                                <img src="./assets/images/dich-vu-xe-cuoi.png" alt="Dịch vụ xe cưới"
+                                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <p style="margin-top: 10px; font-weight: bold;">DỊCH VỤ XE CƯỚI</p>
+                            </div>
+                            <div style="text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                                <img src="./assets/images/taxi-san-bay.png" alt="Taxi sân bay"
+                                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <p style="margin-top: 10px; font-weight: bold;">TAXI SÂN BAY</p>
+                            </div>
+                            <div style="text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                                <img src="./assets/images/dua-don-benh-vien.png" alt="Đưa đón bệnh viện"
+                                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <p style="margin-top: 10px; font-weight: bold;">ĐƯA ĐÓN BỆNH VIỆN</p>
+                            </div>
+                            <div style="text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                                <img src="./assets/images/thue-xe-du-lich.png" alt="Thuê xe du lịch"
+                                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <p style="margin-top: 10px; font-weight: bold;">THUÊ XE DU LỊCH</p>
+                            </div>
+                            <div style="text-align: center; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                                <img src="./assets/images/taxi-duong-dai.png" alt="Taxi đường dài"
+                                    style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <p style="margin-top: 10px; font-weight: bold;">TAXI ĐƯỜNG DÀI</p>
+                            </div>
+                        </div>
+
+                        <div class="floating-icons">
+                            <a href="tel:0869754702" class="icon" id="phone-icon"><i class="fas fa-phone"></i></a>
+                            <a href="https://www.facebook.com/daehuyn02/" class="icon" id="fb-icon"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://m.me/daehuyn02" class="icon" id="messenger-icon"><i
+                                    class="fab fa-facebook-messenger"></i></a>
+                        </div>
+
+                    </div>
+                </main>
+            </main>
+        </main>
+        <footer
+            style="background-color: rgb(14, 232, 200); color: #333; padding: 20px 0; width: 100%; font-family: Arial, sans-serif;">
+            <div
+                style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="color: #333;">TRUNG TÂM TỔNG ĐÀI & CSKH</h3>
+                    <a href="tel:19006067" class="btn btn-red" style=" font-weight: bold;">📞 1900 6067</a>
+                    <p>CÔNG TY CỔ PHẦN XE KHÁCH BIEN HOA</p>
+                    <p>Email: nguyenvantien061202@gmail.com</p>
+                    <p>Điện thoại: 02838386852&nbsp;&nbsp;&nbsp;&nbsp;Fax: 02838386853</p>
+                    <h4>TẢI APP BIEN HOA</h4>
+                    <div>
+                        <img src="./assets/images/chplay.png" alt="CH Play" style="height: 30px; margin-right: 10px;">
+                        <img src="./assets/images/appstore.png" alt="App Store" style="height: 30px;">
+                    </div>
+                    <h4>KẾT NỐI CHÚNG TÔI</h4>
+                    <div>
+                        <a href="https://www.facebook.com/futabuslines" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                                style="fill: #3b5998;">
+                                <path
+                                    d="M12 2C6.477 2 2 6.477 2 12c0 5.013 3.693 9.153 8.505 9.876V14.65H8.031v-2.629h2.474v-1.749c0-2.896 1.411-4.167 3.818-4.167 1.153 0 1.762.085 2.051.124v2.294h-1.642c-1.022 0-1.379.969-1.379 2.061v1.437h2.995l-.406 2.629h-2.588v7.247C18.235 21.236 22 17.062 22 12c0-5.523-4.477-10-10-10z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCs32uT83rxD7_BPqE_IPiZg" target="_blank"
+                            rel="noopener noreferrer" style="margin-left: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                                style="fill: #FF0000;">
+                                <path
+                                    d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="color: #333;">BIEN HOA Bus Lines</h3>
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li>Về chúng tôi</li>
+                        <li>Lịch trình</li>
+                        <li>Tuyển dụng</li>
+                        <li>Tin tức & Sự kiện</li>
+                        <li>Mạng lưới văn phòng</li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+                    <h3 style="color: #333;">Hỗ trợ</h3>
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li>Tra cứu thông tin đặt vé</li>
+                        <li>Điều khoản sử dụng</li>
+                        <li>Câu hỏi thường gặp</li>
+                        <li>Hướng dẫn đặt vé trên Web</li>
+                        <li>Hướng dẫn nạp tiền trên App</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px; padding-top: 20px; font-size: 12px;">
+                <p>© 2023 | Bản quyền thuộc về Công ty Cổ Phần Xe khách - BIEN HOA Bus Lines 2023 | Chịu trách
+                    nhiệm </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets/js/user.js"></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/slidetintuc.js"></script>
+</body>
+
+</html>

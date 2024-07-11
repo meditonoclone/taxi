@@ -1,0 +1,32 @@
+.about-us-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about-us-section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.about-us-section:hover {
+    transform: translateX(10px);
+}
+.about-us-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+.about-us-section p {
+    color: #666;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-us-section a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+

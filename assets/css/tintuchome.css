@@ -1,0 +1,44 @@
+.news-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.news-slider {
+    overflow: hidden;
+}
+
+.news-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.news-item {
+    flex: 0 0 33.333%;
+    padding: 0 15px;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ff6600;
+}

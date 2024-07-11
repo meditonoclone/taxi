@@ -1,0 +1,42 @@
+.about-us-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header .icon {
+    margin-right: 10px;
+    font-size: 28px; /* Tăng kích thước icon */
+}
+
+.section-header h3 {
+    font-size: 22px; /* Tăng kích thước chữ "Về chúng tôi" */
+    color: #666;
+    font-weight: bold; /* Làm đậm chữ */
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.section-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.section-content p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}

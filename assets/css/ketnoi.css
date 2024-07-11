@@ -1,0 +1,46 @@
+.futa-group-connections {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+}
+
+.futa-group-connections h2 {
+    color: #1d1f1e;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.futa-group-connections > p {
+    color: #333;
+    font-size: 14px;
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+.connection-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.option img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.option p {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}

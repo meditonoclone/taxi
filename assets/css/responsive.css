@@ -1,0 +1,47 @@
+/* PC low resolution and Tablet and Mobile(< 1239px) */
+@media (max-width: 77.4375em)
+{
+}
+
+/* PC low resolution and Tablet (740px - 1239px) */
+@media (max-width: 77.4375em) and (min-width: 46.25em)
+{
+
+}
+
+/* Tablet and Mobile (< 1023px) */
+@media (max-width: 63.9375em)
+{
+    .header-container{
+        padding: 15px
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar-mobile-container{
+        display: block;
+    }
+    .fas.fa-bars{
+        font-size: 50px;
+    }
+    .user-account{
+        display: none;
+    }
+    .btn-53{
+        padding: 3.2rem 8rem;
+    }
+
+    
+}
+
+/* Tablet (740px - 1023px)*/
+@media (max-width: 63.9375em) and (min-width: 46.25em)
+{
+    
+}
+
+/* Mobile (< 740px) */
+@media (max-width: 46.1875em)
+{
+
+}
