@@ -76,7 +76,26 @@
     .news-item{
         flex: 0 0 50%;
     }
+    .header-section > h1{
+        display: block;
+        text-align: center;
+    }
+    
+    .header-text h1 {
+        display: none;
 
+    }
+    .header-text {
+        width: 60%;
+
+    }
+    .header-section{
+        flex-wrap: wrap;
+    }
+    .header-image{
+        width:40%;
+    }
+    
 }
 
 /* Tablet (740px - 1023px)*/

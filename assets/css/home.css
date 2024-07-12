@@ -411,6 +411,10 @@ h1 {
     margin-bottom: 2rem;
 }
 
+.header-section > h1{
+    display: none;
+}
+
 .header-text h1 {
     color: #FFA500;
     font-size: 2rem;
