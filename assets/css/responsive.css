@@ -57,6 +57,26 @@
     .form-group label{
         margin-bottom: 2px;
     }
+
+    .service-grid{
+        flex-direction: column;
+    }
+    .section-service{
+        display: block;
+    }
+    .section-service > div{
+        margin-top: 12px;
+    }
+    .content-wrapper{
+        flex-direction: column;
+    }
+    .image-wrapper, .content-wrapper>.content{
+        max-width: 100%;
+    }
+    .news-item{
+        flex: 0 0 50%;
+    }
+
 }
 
 /* Tablet (740px - 1023px)*/
