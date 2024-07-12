@@ -13,22 +13,26 @@
 @media (max-width: 63.9375em)
 {
     .header-container{
-        padding: 15px
+        padding: 15px;
+        justify-content: flex-start;
     }
     .navbar{
         display: none;
     }
     .navbar-mobile-container{
         display: block;
+        order: 1;
     }
     .fas.fa-bars{
         font-size: 35px;
     }
-    .user-account{
-        display: none;
-    }
+   
     .btn-53{
         display: none;
+    }
+    .logo{
+        order: 2;
+        flex-grow: 1;
     }
 
     .logo img{
@@ -37,8 +41,22 @@
     .connection-options{
         flex-wrap: wrap;
     }
+    .action-buttons{
+        order: 3;
+    }
+    .account-btn{
+        border-radius: 50%;
 
-    
+    }
+    .modal-content{
+        width: 75%;
+    }
+    .form-group{
+        margin-bottom: 0;
+    }
+    .form-group label{
+        margin-bottom: 2px;
+    }
 }
 
 /* Tablet (740px - 1023px)*/

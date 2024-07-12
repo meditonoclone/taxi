@@ -1082,6 +1082,10 @@ span.icon {
 #nav-mobile-icon{
     display: none;
 }
+.nav-mobile-icon{
+    
+    margin-right: 4px;
+}
 .navbar-mobile-container{
     display: none;
 }
@@ -1092,7 +1096,7 @@ span.icon {
     width: 200px;
     bottom: 0;
     background-color: white;
-    right: 0;
+    left: 0;
     z-index: 13;
 
 }
@@ -1100,12 +1104,11 @@ span.icon {
 .navbar-mobile li{
     background-color: #0ee8c8;
     list-style: none;
-    text-align:right;
     width: 100%;
     font-size: 1.8em;
     font-weight: bold;
     padding-top: 12px;
-    padding-right: 12px;
+    padding-left: 12px;
     border-bottom: rgb(252, 252, 252) solid 1px;
 }
 
@@ -1116,4 +1119,8 @@ span.icon {
 .navbar-mobile li a{
     text-decoration: none;
     color: rgb(237, 237, 237);
+}
+
+.navbar-mobile li i{
+    margin-right: 4px;
 }
