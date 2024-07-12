@@ -22,13 +22,20 @@
         display: block;
     }
     .fas.fa-bars{
-        font-size: 50px;
+        font-size: 35px;
     }
     .user-account{
         display: none;
     }
     .btn-53{
-        padding: 3.2rem 8rem;
+        display: none;
+    }
+
+    .logo img{
+        width: 50px;
+    }
+    .connection-options{
+        flex-wrap: wrap;
     }
 
     
