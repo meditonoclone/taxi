@@ -1086,6 +1086,7 @@ span.icon {
 #nav-mobile-icon:checked~.navbar-mobile,
 #nav-mobile-icon:checked~.nav-mb-overlay {
     display: block;
+
 }
 
 #nav-mobile-icon {
@@ -1110,7 +1111,8 @@ span.icon {
     background-color: white;
     left: 0;
     z-index: 13;
-
+    animation: navMBslideIn 0.2s linear;
+    
 }
 
 .navbar-mobile li {
@@ -1145,4 +1147,25 @@ span.icon {
     max-width: 1200px;
     margin: 0 auto;
 
+}
+
+
+
+@keyframes navMBslideIn{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes navMBslideOut{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }

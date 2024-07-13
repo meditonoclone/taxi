@@ -96,12 +96,14 @@
         width:40%;
     }
     
+    .service-grid{
+        flex-wrap: nowrap;
+    }
 }
 
 /* Tablet (740px - 1023px)*/
 @media (max-width: 63.9375em) and (min-width: 46.25em)
 {
-    
 }
 
 /* Mobile (< 740px) */
@@ -109,3 +111,4 @@
 {
 
 }
+
