@@ -781,7 +781,7 @@ html {
     width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.3s;
+    animation: slideIn 0.2s;
 }
 
 @keyframes slideIn {
@@ -1111,7 +1111,6 @@ span.icon {
     background-color: white;
     left: 0;
     z-index: 13;
-    animation: navMBslideIn 0.2s linear;
     
 }
 
@@ -1121,8 +1120,6 @@ span.icon {
     width: 100%;
     font-size: 1.8em;
     font-weight: bold;
-    padding-top: 12px;
-    padding-left: 12px;
     border-bottom: rgb(252, 252, 252) solid 1px;
 }
 
@@ -1134,6 +1131,10 @@ span.icon {
 .navbar-mobile li a {
     text-decoration: none;
     color: rgb(237, 237, 237);
+    display: block;
+    width: 100%;
+    padding-top: 12px;
+    padding-left: 12px;
 }
 
 .navbar-mobile li i {
@@ -1163,9 +1164,11 @@ span.icon {
 }
 @keyframes navMBslideOut{
     0%{
+        opacity: 1;
         transform: translateX(0);
     }
     100%{
+        opacity: 0;
         transform: translateX(-100%);
     }
 }

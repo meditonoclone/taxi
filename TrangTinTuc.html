@@ -6,43 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tổng Đài Dịch Vụ Taxi Biên Hòa</title>
 <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-  <link rel="stylesheet" href="./assets/css/home.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/Tintuc.css">
+<link rel="stylesheet" href="./assets/css/base.css">
+<link rel="stylesheet" href="./assets/css/home.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./assets/css/Tintuc.css">
+<link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
   <header>
     <div class="header-container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="./assets/images/logotaxi.png" alt="Taxi Logo" width="100" height="50">
-        </a>
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="dich-vu.html">Dịch Vụ</a></li>
-          <li><a href="TrangTinTuc.html">Tin tức</a></li>
-          <li><a href="contact-us.html">Liên Hệ</a></li>
-          <li><a href="about-us.html">Về Chúng Tôi</a></li>
-        </ul>
-      </nav>
-      <div class="action-buttons">
-        <button class="btn-53">
-          <div class="original">Call Taxi Right Now</div>
-          <div class="letters">
-            <span>0</span><span>8</span><span>3</span><span>8</span><span>2</span><span>2</span><span>9</span><span>9</span><span>6</span><span>6</span>
-          </div>
-        </button>
-        <div class="user-account">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./assets/images/logotaxi.png" alt="Taxi Logo">
+            </a>
         </div>
-      </div>
-  </header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="dich-vu.html">Dịch Vụ</a></li>
+                <li><a href="TrangTinTuc.html">Tin tức</a></li>
+                <li><a href="contact-us.html">Liên Hệ</a></li>
+                <li><a href="about-us.html">Về Chúng Tôi</a></li>
+            </ul>
+        </nav>
+        <div class="action-buttons">
+            <a href="tel:0838229966" class="btn-53">
+                <div class="original">Call Taxi Now</div>
+                <div class="letters">
+                    <span>0</span><span>8</span><span>3</span><span>8</span><span>2</span><span>2</span><span>9</span><span>9</span><span>6</span><span>6</span>
+                </div>
+            </a>
+            <div class="user-account">
+                <button class="account-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+                <div class="account-dropdown">
+                    <a href="#" id="login-link">Đăng nhập</a>
+                    <a href="#" id="register-link">Đăng ký</a>
+                    <a href="#" id="forgot-password-link">Quên mật khẩu</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navbar-mobile-container">
+            <input type="checkbox" id="nav-mobile-icon"/>
+            <label for="nav-mobile-icon" class="nav-mobile-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label for="nav-mobile-icon" class="nav-mb-overlay"></label>
+            <div class="navbar-mobile">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Trang Chủ</a></li>
+                    <li><a href="dich-vu.html"><i class="fas fa-car"></i>Dịch Vụ</a></li>
+                    <li><a href="TrangTinTuc.html"><i class="fas fa-newspaper"></i>Tin tức</a></li>
+                    <li><a href="contact-us.html"><i class="fas fa-comments"></i>Liên Hệ</a></li>
+                    <li><a href="about-us.html"><i class="fas fa-info-circle"></i>Về Chúng Tôi</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
 
   <div class="container">
     <aside class="sidebar">
@@ -197,6 +223,8 @@
         nhiệm </p>
     </div>
   </footer>
-</body>
+    <script src="./assets/js/script.js"></script>
 
+
+</body>
 </html>
